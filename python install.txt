@@ -1,0 +1,30 @@
+@echo off
+
+echo Installing Python 3.11.5...
+
+:: Python 다운로드 URL 설정 (버전에 따라 URL 변경 필요)
+:: set python_url=https://www.python.org/ftp/python/3.8.5/python-3.8.5.exe
+set python_url=https://www.python.org/ftp/python/3.11.5/python-3.11.5-amd64.exe
+
+:: Python 설치 경로 설정
+set install_path=C:\Python3115
+
+:: Python 설치
+curl -s -o python_installer.exe %python_url%
+
+:: 설치 완료 메시지 출력
+echo Python installer downloaded. Installing Python...
+start /wait python_installer.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0
+
+:: 설치 파일 삭제
+del python_installer.exe
+echo Python installer deleted.
+
+:: 설치 완료 메시지 출력
+echo Python 3.11.5 has been installed successfully.
+
+:: 설치된 Python 버전 출력
+python --version
+
+:: Batch 파일 종료
+exit
