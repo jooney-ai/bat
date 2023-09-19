@@ -1,0 +1,22 @@
+@echo off
+
+
+:: Conda 가상환경 생성
+call conda create -p C:\Users\Jooney-AI\anaconda3\envs\env_test --yes
+
+:: Conda 가상환경 활성화
+call conda activate C:\Users\Jooney-AI\anaconda3\envs\env_test
+
+
+:: install requirements
+
+:: Streamlit 애플리케이션 실행
+
+:: streamlit run 심사보조.py
+
+:: Batch 파일 종료
+
+
+
+
+
